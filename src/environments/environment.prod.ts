@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   basePath: 'https://newsapi.org/v2',
-  apiKey: '80cecee58f654808bb5ba1ae377474df'
+  apiKey: '6a792fa445384e0f925888ef1e20c0c8'
 };
