@@ -16,7 +16,6 @@ import { TrendingNewsComponent } from './components/trending-news-component/tren
 import { RecentNewsComponent } from './components/recent-news-component/recent-news-component.component';
 import { PopularNewsComponent } from './components/popular-news-component/popular-news-component.component';
 import { NewsLetterComponent } from './components/news-letter-component/news-letter-component.component';
-import { SocialMediaComponent } from './components/social-media-component/social-media-component.component';
 import { NewsItemComponent } from './components/news-item-component/news-item-component.component';
 import { NewsInteractionsComponent } from './components/news-interactions-component/news-interactions-component.component';
 import { PopularNewsItemComponent } from './components/popular-news-item/popular-news-item.component';
@@ -43,7 +42,6 @@ import { VoteComponent } from './components/vote/vote.component';
     RecentNewsComponent,
     PopularNewsComponent,
     NewsLetterComponent,
-    SocialMediaComponent,
     NewsItemComponent,
     NewsInteractionsComponent,
     PopularNewsItemComponent,
