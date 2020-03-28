@@ -10,10 +10,16 @@ import { NewsItem } from '../../models/news-item';
 export class DetailsPageComponent implements OnInit {
 
   public newsItem: NewsItem;
+  public comments: Array<any> = [];
 
   ngOnInit() {
     this.newsItem = window.history.state.data.item;
+    console.log(this.newsItem);
+  }
 
+  addComment(comment) {
+    console.log(comment);
+    this.comments.push(comment);
   }
 
 }

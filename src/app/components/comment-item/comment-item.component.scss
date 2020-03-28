@@ -1,0 +1,44 @@
+@import '../../../variables';
+
+.comment-wrapper {
+    display: flex;
+    margin-top: 20px;
+
+    .thumbnail {
+        margin-right: 20px;
+
+        i {
+            &:nth-of-type(1) {
+                color: $border-grey;
+            }
+        }
+    }
+
+    .comment {
+        flex-grow: 1;
+
+        .header {
+            margin-bottom: 20px;
+
+            span {
+                font-family: Roboto-Medium;
+
+                &:first-child,
+                &:last-child {
+                    margin-right: 10px;
+                }
+
+                &:last-child {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .body {
+            font-family: Roboto-Regular;
+            font-size: 13px;
+            line-height: 20px;
+            color: $dark-grey;
+        }
+    }
+}

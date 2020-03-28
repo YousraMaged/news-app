@@ -1,0 +1,10 @@
+<h1>
+  {{ newsItem.title }}
+</h1>
+<div class="author">
+  <span>By</span>
+  <span class="name light">{{ newsItem.author || 'John Doe' }}</span>
+  <span class="time"
+    >Publish on {{ helper.getTimeSinceDate(newsItem.publishedAt) }}</span
+  >
+</div>

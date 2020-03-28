@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -24,6 +25,12 @@ import { NewsItemPlaceholderComponent } from './components/news-item-placeholder
 import { NewsService } from './services/news.service';
 import { LoaderService } from './services/loader.service';
 import { HelperService } from './services/helper.service';
+import { NewsItemSharesComponent } from './components/news-item-shares/news-item-shares.component';
+import { NewsItemHeaderComponent } from './components/news-item-header/news-item-header.component';
+import { CommentsComponent } from './components/comments/comments.component';
+import { CommentItemComponent } from './components/comment-item/comment-item.component';
+import { AddCommentComponent } from './components/add-comment/add-comment.component';
+import { VoteComponent } from './components/vote/vote.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +48,13 @@ import { HelperService } from './services/helper.service';
     NewsInteractionsComponent,
     PopularNewsItemComponent,
     ContactsComponent,
-    NewsItemPlaceholderComponent
+    NewsItemPlaceholderComponent,
+    NewsItemSharesComponent,
+    NewsItemHeaderComponent,
+    CommentsComponent,
+    CommentItemComponent,
+    AddCommentComponent,
+    VoteComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +62,7 @@ import { HelperService } from './services/helper.service';
     AppRoutingModule,
     MaterialModuleModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [

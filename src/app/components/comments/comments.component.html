@@ -1,0 +1,4 @@
+<header class="subtitle">
+    <h2 *ngIf="comments.length">Comments</h2>
+</header>
+<app-comment-item *ngFor="let comment of comments" [comment]="comment"></app-comment-item>

@@ -1,0 +1,34 @@
+@import '../../../variables';
+
+button {
+    font-family: Roboto-Regular;
+    margin-right: 20px;
+
+    i {
+        margin-right: 10px;
+    }
+}
+
+#upvote {
+    background-color: #1ca458;
+    color: $white-color;
+}
+
+#downvote {
+    background-color: #ebebeb;
+}
+
+.animate {
+    animation: scale 1s normal forwards ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,32 @@
+@import '../../../variables';
+
+ul {
+    &.border {
+        padding: 30px 0 0 0;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        color: $light-grey;
+        min-height: 50px;
+        font-size: 15px;
+        border-bottom: 1px solid $border-grey;
+        padding: 0 15px;
+
+        i {
+            margin-right: 15px;
+        }
+
+        &#shares {
+            flex-direction: column;
+            padding-bottom: 20px;
+            color: $black;
+
+            #number {
+                font-size: 40px;
+            }
+        }
+    }
+
+}

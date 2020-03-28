@@ -1,0 +1,18 @@
+<div class="comment-wrapper border">
+    <div class="thumbnail">
+        <span class="fa-stack fa-2x">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+          </span>
+    </div>
+    <div class="comment">
+        <div class="header">
+            <span class="user">{{ comment.name }}</span>
+            <span class="time">{{ comment.date }}</span>
+            <span class="time">Reply</span>
+        </div>
+        <div class="body">
+           <p>{{comment.message }}</p> 
+        </div>
+    </div>
+</div>

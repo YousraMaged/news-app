@@ -1,0 +1,37 @@
+#details-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-column-gap: 50px;
+    grid-template-areas:
+        "side details"
+        ". vote"
+        ". comment"
+        ". form";
+}
+
+#shares {
+    grid-area: side;
+}
+
+#details {
+    grid-area: details;
+}
+
+#vote {
+    grid-area: vote;
+}
+
+#comments {
+    grid-area: comment;
+
+}
+
+#form {
+    grid-area: form;
+
+}
+
+#vote,
+#comments {
+    margin-bottom: 30px;
+}

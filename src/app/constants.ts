@@ -30,3 +30,23 @@ export const socialMediaButtons = [
     bgColor: '#2d4865'
   }
 ];
+
+export const socialMediaLinks = [
+  {
+    class: 'fas fa-envelope',
+    name: 'Email'
+  },
+  {
+    class: 'fab fa-facebook-f',
+    name: 'Facebook'
+  },
+  {
+    class: 'fab fa-twitter',
+    name: 'Twitter'
+  },
+  {
+    class: 'fas fa-share',
+    name: 'More'
+  }
+];
+

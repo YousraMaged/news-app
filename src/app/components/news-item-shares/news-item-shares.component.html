@@ -1,0 +1,10 @@
+<ul class="border">
+    <li id="shares">
+        <span id="number" class="bold">23</span>
+        <span>Shares</span>
+    </li>
+    <li *ngFor="let link of socialMediaLinks">
+        <i [ngClass]="link.class"></i>
+        <span>{{ link.name }}</span>
+    </li>
+</ul>

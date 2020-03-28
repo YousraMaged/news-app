@@ -1,0 +1,8 @@
+<button id="upvote" mat-button (click)="vote('up')">
+  <i [class.animate]="upvoted" [ngClass]="upvoted ? 'fas fa-thumbs-up' : 'far fa-thumbs-up'"></i>
+  I found this helpful
+</button>
+<button id="downvote" mat-button (click)="vote('down')">
+  <i [class.animate]="downvoted" [ngClass]="downvoted ? 'fas fa-thumbs-down' : 'far fa-thumbs-down'"></i>
+  I did not find this helpful
+</button>

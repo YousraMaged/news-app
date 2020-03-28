@@ -9,6 +9,7 @@ header {
 
     .brand {
         display: flex;
+        text-decoration: none;
         font-family: Kanit;
         color: $white-color;
 
@@ -38,7 +39,7 @@ footer {
     i {
         margin-right: 3px;
     }
-    
+
 }
 
 .mat-toolbar {

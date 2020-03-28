@@ -1,0 +1,37 @@
+form {
+    .form-group {
+        margin-bottom: 15px;
+
+        input {
+            width: 60%;
+        }
+
+        input,
+        textarea {
+            &:not(:focus) {
+                border-color: #dcdcdc;
+            }
+
+            border-radius: 5px;
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        button {
+            width: 120px;
+
+            &:disabled {
+                color: white;
+                opacity: 0.5;
+            }
+        }
+
+        #info {
+            color: #b0b0b0;
+            font-style: italic;
+            margin-left: 20px;
+        }
+    }
+}

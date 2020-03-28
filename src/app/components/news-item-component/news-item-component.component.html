@@ -1,11 +1,11 @@
-<div [ngClass]="type" (click)="goToDetails()">
+<div class="news-item" [ngClass]="type" (click)="goToDetails()">
   <div *ngIf="!hideImage" class="image">
     <img
-      [src]="newsItem.urlToImage ? newsItem.urlToImage : '/assets/images/placeholder.jpg'"
+      [src]="newsItem.urlToImage || '/assets/images/placeholder.jpg'"
     />
   </div>
   <div class="info">
-    <small *ngIf="type !== 'trending' && type !== 'recent'">Mustreads</small>
+    <small *ngIf="type !== 'trending' && type !== 'recent' && type !=='details'">Mustreads</small>
     <span *ngIf="type === 'trending' || type === 'recent'" class="time">
       {{
         type === "trending"

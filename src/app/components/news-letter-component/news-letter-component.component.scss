@@ -17,22 +17,10 @@
     }
 
     input {
-        font-family: Roboto-Light;
-        font-size: 15px;
-        height: 30px;
         width: 65%;
-        padding: 5px 15px;
-        border: 1px solid $border-grey;
-        outline: none;
         border-radius: 3px;
-        -webkit-appearance: none;
-        transition: all 1s ease;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-
-        &:focus {
-            border-color: $base-color;
-        }
     }
 
     button {

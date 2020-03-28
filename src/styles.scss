@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import './fonts';
 @import './variables';
 
 html,
@@ -21,6 +20,12 @@ h2 {
     margin-top: 0;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .title {
     text-align: center;
 }
@@ -30,13 +35,30 @@ h2 {
     font-family: Roboto-Bold;
 }
 
+.subtitle {
+    font-family: Roboto-Light;
+    color: $dark-grey;
+}
+
 .light {
     color: $base-color;
+}
+
+.bold {
+    font-family: Roboto-Bold;
+}
+
+.dark {
+    color: $black;
 }
 
 .time {
     color: #b0b0b0;
     font-size: 14px;
+}
+
+.user {
+    font-size: 15px;
 }
 
 .author {
@@ -74,8 +96,42 @@ h2 {
     display: flex;
 
     &:not(:last-child) {
-        border-bottom: 1px solid #eaeaea;
+        border-bottom: 1px solid $border-grey;
         margin-bottom: 20px;
         padding-bottom: 20px;
     }
+}
+
+input.outline,
+textarea.outline {
+    font-family: Roboto-Light;
+    font-size: 15px;
+    border: 1px solid $border-grey;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    transition: all 1s ease;
+
+    &:focus {
+        border-color: $base-color;
+    }
+}
+
+input.outline {
+    padding: 20px;
+    height: 30px;
+}
+
+textarea.outline {
+    padding: 5px 20px;
+    resize: none;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thick,
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: red;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+    color: red;
 }
