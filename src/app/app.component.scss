@@ -1,0 +1,30 @@
+@import '../variables';
+
+.mat-toolbar {
+    justify-content: space-between;
+    background-color: $base-color;
+    padding: 0 5%;
+}
+
+.brand {
+    display: flex;
+    font-family: Kanit;
+    color: $white-color;
+
+    span {
+        &:first-child {
+            font-size: 50px;
+            line-height: 30px;
+        }
+
+        &:last-child {
+            font-size: 10px;
+            line-height: 10px;
+        }
+    }
+}
+
+.content {
+    width: 90%;
+    margin: auto;
+}

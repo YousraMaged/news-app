@@ -1,0 +1,18 @@
+#news-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-gap: 20px;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.featured {
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}

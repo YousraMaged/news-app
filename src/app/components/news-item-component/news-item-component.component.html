@@ -1,0 +1,17 @@
+<div [ngClass]="type">
+    <div *ngIf="!hideImage" class="image">
+        <img src="/assets/images/download.jpg">
+    </div>
+    <div class="info">
+        <small *ngIf="type !== 'trending' && type !== 'recent'">Mustreads</small>
+        <span *ngIf="type === 'trending' || type === 'recent'" class="time">16 October</span>
+        <h1 class="header" *ngIf="type === 'featured'">If you wanted to get rich, How would you do it?</h1>
+        <h4 [class.bold]="!hideImage" *ngIf="type === 'picks' || type === 'trending'">If you wanted to get rich, How would you do it?</h4>
+        <p *ngIf="type !== 'trending'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores beatae eveniet iure nihil.</p>
+        <div *ngIf="type === 'featured' || type === 'picks'" class="author">
+            <span>By</span>
+            <span class="name light">Paul Graham</span>
+            <span class="time"> - 16 hours ago</span>
+        </div>
+    </div>
+</div>

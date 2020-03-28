@@ -1,0 +1,14 @@
+.mat-card {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 130px;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    i {
+        color: #cfd0d2;
+    }
+}

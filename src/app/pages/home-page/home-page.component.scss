@@ -1,0 +1,28 @@
+@import '../../../variables';
+
+#home-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "news side"
+    "picks side"
+    "trending trending";
+}
+
+#news {
+    grid-area: news;
+}
+
+#side-content {
+    grid-area: side;
+}
+
+#editor-picks {
+    grid-area: picks;
+}
+
+#trending {
+    border-top: 4px solid $border-grey;
+    grid-area: trending;
+}

@@ -1,0 +1,16 @@
+@import '../../../variables';
+
+#trending-news {
+    padding-top: 20px;
+
+    .news {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 20px;
+    }
+
+    .trending-news-item {
+        border-bottom: 1px solid $border-grey;
+        margin-bottom: 20px;
+    }
+}

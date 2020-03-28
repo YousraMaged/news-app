@@ -1,0 +1,12 @@
+@import '../../../variables';
+
+article {
+    font-family: Roboto-Regular;
+    font-size: 18px;
+    line-height: 25px;
+    color: $dark-grey;
+
+    :first-child {
+        margin-right: 20px;
+    }
+}
