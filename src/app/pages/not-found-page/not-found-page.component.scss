@@ -1,0 +1,20 @@
+@import '../../../variables';
+.not-found {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 80px;
+        color: $base-color;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-family: Roboto-Regular;
+        color: $black;
+        margin-bottom: 10px;
+    }
+}
