@@ -31,6 +31,7 @@ export class AddCommentComponent implements OnInit {
     event.preventDefault();
     this.commentForm.get('date').setValue(this.helper.stringToFullDate(Date.now()));
     this.addComment.emit(this.commentForm.value);
+    this.commentForm.reset();
   }
 
 }

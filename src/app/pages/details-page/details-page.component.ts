@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { NewsItem } from '../../models/news-item';
 
@@ -12,13 +13,18 @@ export class DetailsPageComponent implements OnInit {
   public newsItem: NewsItem;
   public comments: Array<any> = [];
 
+  constructor(private router: Router) {}
+
   ngOnInit() {
-    this.newsItem = window.history.state.data.item;
-    console.log(this.newsItem);
+    if (window.history.state.data) {
+      this.newsItem = window.history.state.data.item;
+    } else {
+      this.router.navigate(['/']);
+
+    }
   }
 
   addComment(comment) {
-    console.log(comment);
     this.comments.push(comment);
   }
 

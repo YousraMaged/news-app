@@ -23,7 +23,7 @@
     <p *ngIf="type !== 'trending'">{{ newsItem.description }}</p>
     <div *ngIf="type === 'featured' || type === 'picks'" class="author">
       <span>By</span>
-      <span class="name light">{{ newsItem.author }}</span>
+      <span class="name light">{{ newsItem.author || 'John Doe' }}</span>
       <span *ngIf="type === 'picks'" class="time">
         - {{ helper.getTimeSinceDate(newsItem.publishedAt) }}</span
       >
