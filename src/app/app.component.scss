@@ -1,28 +1,50 @@
 @import '../variables';
 
-.mat-toolbar {
-    justify-content: space-between;
-    background-color: $base-color;
-    padding: 0 5%;
-}
+header {
 
-.brand {
-    display: flex;
-    font-family: Kanit;
-    color: $white-color;
+    .mat-toolbar {
+        justify-content: space-between;
+        background-color: $base-color;
+    }
 
-    span {
-        &:first-child {
-            font-size: 50px;
-            line-height: 30px;
-        }
+    .brand {
+        display: flex;
+        font-family: Kanit;
+        color: $white-color;
 
-        &:last-child {
-            font-size: 10px;
-            line-height: 10px;
+        span {
+            &:first-child {
+                font-size: 50px;
+                line-height: 30px;
+            }
+
+            &:last-child {
+                font-size: 10px;
+                line-height: 10px;
+            }
         }
     }
 }
+
+footer {
+    .mat-toolbar {
+        font-family: Roboto-Light;
+        font-size: 12px;
+        background-color: $black;
+        color: $light-grey;
+        height: 45px;
+    }
+
+    i {
+        margin-right: 3px;
+    }
+    
+}
+
+.mat-toolbar {
+    padding: 0 5%;
+}
+
 
 .content {
     width: 90%;

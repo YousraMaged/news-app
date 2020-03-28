@@ -3,17 +3,9 @@
         <h2>Trending</h2>
     </header>
     <div class="news">
-        <app-news-item-component class="trending-news-item" type="trending"></app-news-item-component>
-        <app-news-item-component class="trending-news-item" type="trending"></app-news-item-component>
-        <app-news-item-component class="trending-news-item" type="trending"></app-news-item-component>
-        <app-news-item-component class="trending-news-item" type="trending"></app-news-item-component>
-        <app-news-item-component class="trending-news-item" type="trending" [hideImage]="true"></app-news-item-component>
-        <app-news-item-component class="trending-news-item" type="trending" [hideImage]="true"></app-news-item-component>
-        <app-news-item-component class="trending-news-item" type="trending" [hideImage]="true"></app-news-item-component>
-        <app-news-item-component class="trending-news-item" type="trending" [hideImage]="true"></app-news-item-component>
-        <app-news-item-component class="trending-news-item" type="trending" [hideImage]="true"></app-news-item-component>
-        <app-news-item-component class="trending-news-item" type="trending" [hideImage]="true"></app-news-item-component>
-        <app-news-item-component class="trending-news-item" type="trending" [hideImage]="true"></app-news-item-component>
-        <app-news-item-component class="trending-news-item" type="trending" [hideImage]="true"></app-news-item-component>
+        <ng-container *ngIf="isLoading">
+            <app-news-item-placeholder *ngFor="let placeholder of placeholders"></app-news-item-placeholder>
+        </ng-container>
+        <app-news-item-component *ngFor="let newsItem of news; let i = index" [newsItem]="newsItem" [hideImage]="i > 3" class="trending-news-item" type="trending"></app-news-item-component>
     </div>
 </section>

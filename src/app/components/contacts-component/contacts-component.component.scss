@@ -1,0 +1,18 @@
+ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline;
+        margin-right: 5px;
+
+        .contact-btn {
+            min-width: 45px;
+            min-height: 45px;
+            color: white;
+            padding: 0;
+            font-size: 20px;
+        }
+    }
+}

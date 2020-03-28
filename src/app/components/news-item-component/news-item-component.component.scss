@@ -1,12 +1,5 @@
 @import '../../../variables';
 
-.featured,
-.recent {
-    img {
-        min-width: 100%;
-    }
-}
-
 .featured {
     .info {
         p {
@@ -23,6 +16,10 @@
 .recent {
     display: flex;
 
+    .image {
+        margin-right: 20px;
+    }
+
     .info {
         p {
             margin: 0px 0px 5px 0px;
@@ -32,10 +29,8 @@
 
 .recent {
     .image {
-        margin-right: 20px;
-
         img {
-            width: 110px;
+            width: 130px;
             height: 75px;
         }
     }
@@ -43,8 +38,6 @@
 
 .picks {
     .image {
-        margin-right: 20px;
-
         img {
             width: 175px;
             height: 120px;
@@ -61,16 +54,13 @@
 .trending {
     .image {
         margin-bottom: 20px;
-
-        img {
-            width: 100%;
-        }
     }
 }
 
 .image {
     img {
-        object-fit: cover;
+        object-fit: contain;
+        width: 100%;
     }
 }
 
@@ -105,22 +95,5 @@
         font-size: 16px;
         line-height: 25px;
         margin: 10px 0px 24px 0px;
-    }
-
-    .time {
-        color: #b0b0b0;
-        font-size: 14px;
-    }
-
-    .author {
-        span {
-            font-size: 14px;
-            font-family: Roboto-Regular;
-
-            &:first-of-type {
-                margin-right: 5px;
-            }
-
-        }
     }
 }

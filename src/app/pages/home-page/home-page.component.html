@@ -3,12 +3,12 @@
 </header>
 <div id="home-wrapper">
   <aside id="side-content">
-    <app-recent-news-component></app-recent-news-component>
-    <app-popular-news-component></app-popular-news-component>
+    <app-recent-news-component [news]="recentNews" [isLoading]="isLoading.value['recent']"></app-recent-news-component>
+    <app-popular-news-component [news]="popularNews" [isLoading]="isLoading.value['popular']"></app-popular-news-component>
     <app-news-letter-component></app-news-letter-component>
-    <app-follow-us-component></app-follow-us-component>
+    <app-contacts-component></app-contacts-component>
   </aside>
-    <app-news-component id="news"></app-news-component>
-    <app-editor-picks-component id="editor-picks"></app-editor-picks-component>
-    <app-trending-news-component id="trending"></app-trending-news-component>
+    <app-news-component [news]="headlines" [isLoading]="isLoading.value['headlines']" id="news"></app-news-component>
+    <app-editor-picks-component [news]="editorPicks" [isLoading]="isLoading.value['editorPicks']" id="editor-picks"></app-editor-picks-component>
+    <app-trending-news-component [news]="trendingNews" [isLoading]="isLoading.value['trending']" id="trending"></app-trending-news-component>
 </div>

@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'home', component: HomePageComponent },
-  { path: 'news/:id', component: DetailsPageComponent },
+  { path: 'details/:title', component: DetailsPageComponent },
   { path: '**', redirectTo: 'home' }
 ];
 

@@ -1,14 +1,16 @@
 <section id="news-wrapper">
-    <article  class="featured">
-        <app-news-item-component [type]="'featured'"></app-news-item-component>
-        <app-news-interactions-component></app-news-interactions-component>
-    </article>
-    <article>
-        <app-news-item-component></app-news-item-component>
-        <app-news-interactions-component></app-news-interactions-component>
-    </article>
-    <article>
-        <app-news-item-component></app-news-item-component>
-        <app-news-interactions-component></app-news-interactions-component>
-    </article>
+  <ng-container *ngIf="isLoading">
+    <app-news-item-placeholder *ngFor="let placeholder of placeholders"></app-news-item-placeholder>
+  </ng-container>
+
+  <article
+    *ngFor="let newsItem of news; let i = index"
+    [class.featured]="i == 0"
+  >
+    <app-news-item-component
+      [newsItem]="newsItem"
+      [type]="i == 0 ? 'featured' : 'news'"
+    ></app-news-item-component>
+    <app-news-interactions-component></app-news-interactions-component>
+  </article>
 </section>

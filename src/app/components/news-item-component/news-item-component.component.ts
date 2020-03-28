@@ -1,19 +1,29 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { HelperService } from '../../services/helper.service';
+import { NewsItem } from '../../models/news-item';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-news-item-component',
   templateUrl: './news-item-component.component.html',
   styleUrls: ['./news-item-component.component.scss']
 })
-export class NewsItemComponentComponent implements OnInit {
+export class NewsItemComponent {
 
-  @Input() type: string;
   @Input() hideImage: boolean;
+  @Input() newsItem: NewsItem;
+  @Input() type: string;
 
-  constructor() { }
+  constructor(public helper: HelperService, private router: Router) {}
 
-  ngOnInit() {
-    console.log(this.type);
+  goToDetails() {
+    this.router.navigate([`/details/${this.newsItem.title}`], {
+      state: {
+        data: {
+          item: this.newsItem
+        }
+      }
+    });
   }
 
 }

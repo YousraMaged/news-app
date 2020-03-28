@@ -1,0 +1,81 @@
+.placeholder {
+    width: 100%;
+
+
+
+    .image {
+        width: 100%;
+        height: 150px;
+    }
+
+    .image,
+    .info div {
+        background-color: #fafafa;
+        background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+        background-repeat: no-repeat;
+        border-radius: 3px;
+        background-size: 800px 100%;
+        display: inline-block;
+        position: relative;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: shimmer;
+        animation-timing-function: linear;
+    }
+
+    .info {
+        margin-top: 15px;
+
+        div {
+            margin-bottom: 5px;
+
+            &:nth-of-type(1) {
+                width: 30%;
+                height: 20px;
+            }
+
+            &:nth-of-type(2) {
+                height: 70px;
+                width: 80%;
+            }
+
+            &:nth-of-type(3) {
+                height: 20px;
+                width: 100%;
+            }
+
+        }
+    }
+
+    &.horizontal {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .image {
+            width: 30%;
+            height: 92px;
+        }
+
+        .info {
+            margin: 0;
+            width: 65%;
+
+            div {
+                height: 25px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    @keyframes shimmer {
+        0% {
+            background-position: -468px 0;
+        }
+
+        100% {
+            background-position: 468px 0;
+        }
+    }
+}

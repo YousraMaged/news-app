@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { NewsItem } from '../../models/news-item';
 
 @Component({
   selector: 'app-popular-news-item',
   templateUrl: './popular-news-item.component.html',
   styleUrls: ['./popular-news-item.component.scss']
 })
-export class PopularNewsItemComponent implements OnInit {
+export class PopularNewsItemComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() newsItem: NewsItem;
+  @Input() index: number;
 
 }

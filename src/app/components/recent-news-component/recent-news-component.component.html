@@ -1,8 +1,17 @@
 <section id="recent-posts-wrapper" class="border">
-    <header class="header light">
-        <h2>Recent Posts</h2>
-    </header>
-    <app-news-item-component class="recent-news row" [type]="'recent'"></app-news-item-component>
-    <app-news-item-component  class="recent-news row"  [type]="'recent'"></app-news-item-component>
-    <app-news-item-component  class="recent-news"  [type]="'recent'"></app-news-item-component>
+  <header class="header light">
+    <h2>Recent Posts</h2>
+  </header>
+  <ng-container *ngIf="isLoading">
+    <app-news-item-placeholder
+      [orientation]="'horizontal'"
+      *ngFor="let placeholder of placeholders"
+    ></app-news-item-placeholder>
+  </ng-container>
+  <app-news-item-component
+    *ngFor="let newsItem of news; let i = index"
+    class="recent-news row"
+    [type]="'recent'"
+    [newsItem]="newsItem"
+  ></app-news-item-component>
 </section>

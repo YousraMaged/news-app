@@ -1,10 +1,17 @@
 <section id="popular-news-wrapper" class="border">
-    <header class="header light">
-        <h2>5 Most Popular</h2>
-    </header>
-    <app-popular-news-item class="row"></app-popular-news-item>
-    <app-popular-news-item class="row"></app-popular-news-item>
-    <app-popular-news-item class="row"></app-popular-news-item>
-    <app-popular-news-item class="row"></app-popular-news-item>
-    <app-popular-news-item></app-popular-news-item>
+  <header class="header light">
+    <h2>5 Most Popular</h2>
+  </header>
+  <ng-container *ngIf="isLoading">
+    <app-news-item-placeholder
+      [orientation]="'horizontal'"
+      *ngFor="let placeholder of placeholders"
+    ></app-news-item-placeholder>
+  </ng-container>
+  <app-popular-news-item
+    *ngFor="let newsItem of news; let i = index"
+    class="row"
+    [newsItem]="newsItem"
+    [index]="i"
+  ></app-popular-news-item>
 </section>

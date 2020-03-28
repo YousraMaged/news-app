@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { NewsItem } from '../../models/news-item';
+
 @Component({
   selector: 'app-details-page',
   templateUrl: './details-page.component.html',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsPageComponent implements OnInit {
 
-  constructor() { }
+  public newsItem: NewsItem;
 
   ngOnInit() {
+    this.newsItem = window.history.state.data.item;
+
   }
 
 }
