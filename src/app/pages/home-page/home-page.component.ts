@@ -29,6 +29,7 @@ export class HomePageComponent implements OnInit {
   }
 
   getHeadlines() {
+    this.loaderService.change('headlines', true);
     this.newsService.getHeadlines().subscribe(res => {
       this.headlines = res.articles;
       this.loaderService.change('headlines', false);
@@ -38,6 +39,9 @@ export class HomePageComponent implements OnInit {
   getPopularNews() {
     const time = moment().subtract(3, 'd');
     const formattedTime = time.format(dateFormat);
+
+    this.loaderService.change('trending', true);
+    this.loaderService.change('popular', true);
 
     this.newsService.getNews('popularity', timeNow, formattedTime, '20').subscribe(res => {
       this.trendingNews = res.articles.slice(0, 12);
@@ -50,6 +54,9 @@ export class HomePageComponent implements OnInit {
   getRecentNews() {
     const time = moment().subtract(12, 'h');
     const formattedTime = time.format(dateFormat);
+
+    this.loaderService.change('editorPicks', true);
+    this.loaderService.change('recent', true);
 
     this.newsService.getNews('publishedAt', timeNow, formattedTime, '10').subscribe((res) => {
       this.editorPicks = res.articles.slice(0, 3);

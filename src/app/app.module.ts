@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AppRoutingModule } from './app-routing.module';
+import { MaterialModuleModule } from './material-module.module';
+
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { DetailsPageComponent } from './pages/details-page/details-page.component';
-import { AppRoutingModule } from './app-routing.module';
-import { MaterialModuleModule } from './material-module.module';
+
 import { NewsComponent } from './components/news-component/news-component.component';
 import { EditorPicksComponent } from './components/editor-picks-component/editor-picks-component.component';
 import { TrendingNewsComponent } from './components/trending-news-component/trending-news-component.component';
@@ -21,15 +23,16 @@ import { NewsInteractionsComponent } from './components/news-interactions-compon
 import { PopularNewsItemComponent } from './components/popular-news-item/popular-news-item.component';
 import { ContactsComponent } from './components/contacts-component/contacts-component.component';
 import { NewsItemPlaceholderComponent } from './components/news-item-placeholder/news-item-placeholder.component';
-import { NewsService } from './services/news.service';
-import { LoaderService } from './services/loader.service';
-import { HelperService } from './services/helper.service';
 import { NewsItemSharesComponent } from './components/news-item-shares/news-item-shares.component';
 import { NewsItemHeaderComponent } from './components/news-item-header/news-item-header.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { CommentItemComponent } from './components/comment-item/comment-item.component';
 import { AddCommentComponent } from './components/add-comment/add-comment.component';
 import { VoteComponent } from './components/vote/vote.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { NewsService } from './services/news.service';
+import { LoaderService } from './services/loader.service';
+import { HelperService } from './services/helper.service';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,8 @@ import { VoteComponent } from './components/vote/vote.component';
     CommentsComponent,
     CommentItemComponent,
     AddCommentComponent,
-    VoteComponent
+    VoteComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,

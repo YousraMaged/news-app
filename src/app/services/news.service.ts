@@ -22,7 +22,9 @@ export class NewsService {
     });
   }
 
-  public getNews(sortBy: string, from: string, to: string, pageSize: string = '3', sources: string = 'cnn', language: string = 'en') {
+  public getNews(
+    sortBy: string, from: string, to: string, pageSize: string = '3', sources: string = 'cnn', language: string = 'en'
+    ) {
     return this.http.get<any>(`${this.basePath}/everything`, {
       params: {
         sortBy,
