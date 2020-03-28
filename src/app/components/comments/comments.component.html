@@ -1,4 +1,9 @@
-<header class="subtitle">
+<header *ngIf="comments.length; else placeholder" class="subtitle">
     <h2>Comments</h2>
 </header>
+<ng-template #placeholder>
+    <div class="row subtitle">
+        Be the first one to comment...
+    </div>
+</ng-template>
 <app-comment-item *ngFor="let comment of comments" [comment]="comment"></app-comment-item>

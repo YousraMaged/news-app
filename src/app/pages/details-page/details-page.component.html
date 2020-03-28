@@ -5,6 +5,6 @@
     <app-news-item-shares id="shares"></app-news-item-shares>
     <app-news-item-component id="details" [newsItem]="newsItem" [type]="'details'"></app-news-item-component>
     <app-vote id="vote"></app-vote>
-    <app-comments *ngIf="comments.length" id="comments" [comments]="comments"></app-comments>
+    <app-comments id="comments" [comments]="comments"></app-comments>
     <app-add-comment (addComment)="addComment($event)" id="form"></app-add-comment>
 </section>
