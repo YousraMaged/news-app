@@ -11,6 +11,7 @@ import { HelperService } from '../../services/helper.service';
 export class AddCommentComponent implements OnInit {
 
   public commentForm: FormGroup = this.createFormGroup();
+  public isLoading: boolean = false;
   @Output() addComment: EventEmitter<Comment> = new EventEmitter();
 
   constructor(private helper: HelperService) { }
@@ -29,9 +30,13 @@ export class AddCommentComponent implements OnInit {
 
   onSubmit(event) {
     event.preventDefault();
+    this.isLoading = true;
     this.commentForm.get('date').setValue(this.helper.stringToFullDate(Date.now()));
-    this.addComment.emit(this.commentForm.value);
-    this.commentForm.reset();
+    setTimeout(() => {
+      this.addComment.emit(this.commentForm.value);
+      this.commentForm.reset();
+      this.isLoading = false;
+    }, 1000);
   }
 
 }

@@ -13,8 +13,8 @@
         <textarea formControlName="message" class="outline" placeholder="Message" rows="4"></textarea>
     </div>
     <div class="form-group">
-        <button type="submit" class="primary-btn" [disabled]="!commentForm.valid" mat-button>
-            Send
+        <button type="submit" class="primary-btn" [disabled]="!commentForm.valid || isLoading" mat-button>
+            Send <i *ngIf="isLoading" class="fas fa-spinner fa-pulse"></i>
         </button>
     </div>
 </form>
